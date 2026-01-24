@@ -1,0 +1,30 @@
+save oob-02
+demo 02_1
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 9; developer 0; ent_bbox player; ent_bbox prop_physics; ent_bbox prop_portal
+
+settings spt_set_ivp_seed_on_load 1;
+settings spt_set_all_sounds_available_after_load 1;
+settings spt_set_physics_hook_offset_on_load 0.015;
+
+vars
+
+frames
+
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|ticks|
+
+----------|------|------|-|-|1| cl_mouseenable 0; spt_afterframes_await_load; sensitivity 1.44; spt_set_isg 0
+
+----------|------|------|-|-|0| tas_aim -23 146 8
+s00-------|------|------|40|-|20|
+s00-------|------|------|90|-|17|
+----------|------|------|-|-|0| tas_aim -30 160 10
+s00-------|------|j-----|90|-|1|
+s00-------|------|------|90|-|3|
+s00-------|------|---1--|160|-|1|
+s00------u|------|---1--|160|-|6|
+----------|------|------|-|-|0| tas_aim 25 0 5
+s00-------|------|------|90|-|5|
+s00-------|------|--u---|90|-|1|
+
+----------|------|------|-|-|0| cl_mouseenable 1; tas_pause 1; tas_aim_reset; stop; save oob-02_1

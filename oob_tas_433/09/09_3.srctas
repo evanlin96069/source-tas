@@ -1,0 +1,22 @@
+save oob-09_2
+demo 09_3
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 3; tas_pause 0; tas_strafe_allow_jump_override 1
+
+settings spt_set_ivp_seed_on_load 12
+settings spt_set_physics_hook_offset_on_load 0.015
+settings spt_set_all_sounds_available_after_load 1
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0; _y_spt_afterframes_await_load;
+----------|------|-d----|-|-|66|_y_spt_setangles 71.2 -118.6; _y_spt_anglesetspeed 8;
+----------|------|-d-1--|-|-|1|
+s00-------|------|------|-90|-|40|
+----------|------|------|-|-|55|_y_spt_setangles 0 0;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|50|_y_spt_setangles 30 -100; _y_spt_anglesetspeed 3;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|10|_y_spt_setangles 40 -100;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|1|cl_mouseenable 1; y_spt_cvar fps_max 66.6667; tas_pause 0; // save oob-10;

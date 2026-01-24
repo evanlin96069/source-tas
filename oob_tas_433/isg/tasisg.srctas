@@ -1,0 +1,22 @@
+save tasisg
+demo 02_isg
+
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 9; developer 0; ent_bbox player; ent_bbox prop_physics; ent_bbox prop_portal
+
+settings spt_set_ivp_seed_on_load 4104;
+
+vars
+
+frames
+
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|ticks|
+
+----------|------|------|-|-|1| cl_mouseenable 0; spt_afterframes_await_load; sensitivity 1.44; spt_set_isg 0
+
+----------|------|------|-|-|0| tas_aim 89 -138.19 1
+----------|------|------|-|-|22| // change this
+----------|f-----|------|-|-|6|
+//----------|------|------|-|-|30|
+
+----------|------|------|-|-|0| cl_mouseenable 1; tas_aim_reset; stop; disconnect;

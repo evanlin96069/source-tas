@@ -1,0 +1,163 @@
+save oob-10
+demo 10
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; tas_strafe_afh 0; tas_strafe_version 3; tas_pause 0; tas_strafe_allow_jump_override 1;
+
+settings spt_set_ivp_seed_on_load 5625;
+settings spt_set_physics_hook_offset_on_load 0.015;
+settings spt_set_all_sounds_available_after_load 1;
+
+//settings mat_norendering 1;
+//search random
+//posx -600|3500
+//posz 600|1500
+//vely -300|300
+//velz 0|392
+//tickend 0|5
+
+vars
+var end cl_mouseenable 1; spt_cvar fps_max 66.6667; tas_aim_reset; mat_norendering 0;
+
+// chair stuck launch
+//int walk_ticks 20|35|1
+//float ang_speed 2|5|0.01
+//float look_yaw -140|-120|0.01
+//float look_pitch 20|60|0.01
+var walk_ticks 32
+var ang_speed 4.35
+var look_yaw -127.66
+var look_pitch 46.76
+
+// throw
+//float throw_pitch -25|-15|0.01
+//float throw_speed 3|8|0.01
+//float throw_yaw 120|165|0.01
+var throw_pitch -16.84
+var throw_speed 7.13
+var throw_yaw 164
+
+// chair sg launch
+//float launch_pitch 25|27|0.01
+//float launch_yaw 70|85|0.01
+//float walk_dir 70|85|0.01
+var launch_pitch 26.73
+var launch_yaw 75.14
+var walk_dir 71.92
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0; _y_spt_afterframes_await_load;
+s00-------|------|------|3|-|7|_y_spt_setangles [look_pitch] [look_yaw]; _y_spt_anglesetspeed 3;
+
+// 2000ups chair stuck launch
+----------|------|------|-|-|1|_y_spt_afterframes_await_load;
+s00-------|------|-d----|-|-|[walk_ticks]|_y_spt_setangles [look_pitch] [look_yaw];
+s01-j-----|------|-d----|-|-|20|_y_spt_setangles 89 -180; _y_spt_anglesetspeed 10;
+
+// setup chair sg launch
+s00-------|------|------|-120|-|10|_y_spt_setangles [throw_pitch] [throw_yaw]; _y_spt_anglesetspeed [throw_speed];
+s00-------|------|------|-180|-|10|_y_spt_setangles [throw_pitch] [throw_yaw];
+s00-------|------|---1--|-|-|1|
+s00-------|------|------|-|-|18|
+----------|------|------|-|-|15|_y_spt_setangles 0 165;
+----------|------|---1--|-|-|1|
+----------|------|------|-|-|34|_y_spt_setangles 30 70; _y_spt_anglesetspeed 5;
+
+// 1400ups sg launch
+s00-------|------|--u---|[walk_dir]|-|1|_y_spt_setangles 60 80;
+s00-------|------|------|-|-|10|_y_spt_setangles 60 80;
+s00-------|------|------|-|-|35|_y_spt_setangles [launch_pitch] 90;
+s00-j-----|------|------|-|-|5|_y_spt_setangles [launch_pitch] [launch_yaw]; _y_spt_anglesetspeed 3;
+s01-j-----|------|-d----|-|-|7|
+s01-j-----|------|-du---|-|-|1|
+s01-j-----|------|-d----|-|-|12|
+s01-j-----|------|-d----|5|-|15|_y_spt_setangles 2 115.5; _y_spt_anglesetspeed 10;
+s01-j-----|------|------|-10|-|6|_y_spt_setangles 2 115.5;
+s01-j-----|------|---1--|-|-|1|_y_spt_setangles 2 115.5;
+s01-j-----|------|------|-|-|25|
+s01-j-----|------|-d----|-2.5|-|11|
+sl;
+s01-j-----|------|-d----|-|-|48|
+
+----------|------|------|-|-|3|pause;
+
+// ^ 2022/09/02
+// 11
+// V 2025/09/08
+
+----------|------|------|-|-|1|spt_afterframes_await_load;
+----------|------|------|-|-|1|
+----------|------|------|-|-|1|+strafe; sensitivity 9999999999999999999999999999999999999999999;
+----------|------|------|-|-|1|-strafe; sensitivity 3;
+
+----------|------|------|-|-|0|spt_trace_start;
+s30-------|------|------|-140|-|50|spt_setangles 0 150; spt_anglesetspeed 3;
+----------|------|------|-|-|13|
+----------|------|---1--|-|-|1|
+----------|------|------|-|-|33|spt_setangles -22 -150.5; spt_anglesetspeed 5;
+----------|------|---1--|-|-|1|
+s30-------|------|------|90|-|10|
+s30-------|------|------|180|-|15|
+s30-------|------|------|0|-|8|
+
+s30-------|------|------|0|-|7|
+s30-------|------|------|90|-|6|spt_setangles -58.84 -162.79; spt_anglesetspeed 30;
+s30-------|------|---1--|-|-|1|spt_setangles -58.84 -162.79;
+
+s30-------|------|------|-90|-|15|
+----------|------|------|-|-|2|
+s30-------|------|------|0|-|16|spt_setangles 45 180; spt_anglesetspeed 5;
+----------|------|---1--|-|-|1|
+
+----j-----|------|------|-|-|5|
+
+----------|------|-d----|-|-|28|spt_setangles 89 0; spt_anglesetspeed 3;
+----------|------|-d-1--|-|-|1|
+----------|------|-d----|-|-|3|
+----------|------|------|-|-|30|spt_setangles -8 -175;
+----------|------|---1--|-|-|1|
+----------|------|------|-|-|10|spt_setangles 0 8.5; spt_anglesetspeed 5;
+s00-------|------|------|-|-|30|spt_setangles 0 8.5;
+s00-------|------|---1--|-|-|1|spt_setangles 0 8.5;
+s00-------|------|------|10|-|35|spt_setangles 10 40; spt_anglesetspeed 2;
+----------|------|--u---|-|-|1|
+s30-------|------|------|180|-|10|spt_setangles 40 180; spt_anglesetspeed 4;
+s00-------|------|------|-|-|10|spt_setangles 40 180;
+s00-------|------|j-----|-|-|13|spt_setangles 40 180;
+s00-------|------|j---2-|-|-|1|spt_setangles 40 180;
+s00-------|------|j-----|-|-|40|spt_setangles 70 -78; spt_anglesetspeed 3;
+----------|------|------|-|-|20|spt_setangles 70 -78;
+----------|------|----2-|-|-|1|
+s30-------|------|------|-10|-|20|spt_setangles -20 180;
+s30-------|------|------|0|-|20|spt_setangles -20 180;
+s00-------|------|------|-|-|3|spt_setangles -20 180;
+----------|------|------|-|-|5|
+----------|------|---1--|-|-|1|
+----------|------|------|-|-|33|spt_setangles 3 90;
+----------|------|---1--|-|-|1|
+s30-------|------|-d----|0|-|33|spt_setangles 89 90;
+----------|------|----2-|-|-|1|
+----------|------|------|-|-|33|spt_setangles 65 -90;
+----------|------|----2-|-|-|1|
+s30-------|------|------|-90|-|33|spt_setangles -25 -60;
+----------|------|------|-|-|3|
+----------|------|---1--|-|-|1|
+----------|---b--|------|-|-|10|spt_setangles 0 90;
+----------|------|------|-|-|5|
+----------|------|------|-|-|30|spt_setangles 10 100; spt_anglesetspeed 5;
+s30-------|---b--|------|-90|-|10|spt_setangles 10 100;
+----------|------|---1--|-|-|1|
+s30-------|------|------|180|-|30|spt_setangles 40 0;
+----------|------|------|-|-|10|spt_setangles 60 0;
+----------|------|----2-|-|-|1|
+----------|------|------|-|-|10|spt_setangles 89 0;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|60|spt_setangles -40 0; spt_anglesetspeed 3;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|33|spt_setangles 40 -20;
+----------|------|---1--|-|-|1|
+----------|---b--|------|-|-|33|spt_setangles 20 -70;
+----------|------|--u---|-|-|1|
+----------|------|------|-|-|100|spt_setangles -18.5 27; spt_anglesetspeed 1;
+----------|------|------|-|-|160|
+----------|------|------|-|-|1|[end]; tas_pause 0; spt_trace_stop; spt_trace_set_tick -1; // save oob-13;

@@ -1,0 +1,51 @@
+save oob-09_1
+demo 09_2
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_version 3; tas_pause 0; tas_strafe_allow_jump_override 1
+
+settings spt_set_ivp_seed_on_load 4
+settings spt_set_physics_hook_offset_on_load 0.015
+settings spt_set_all_sounds_available_after_load 1
+
+frames
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|tick|
+----------|------|------|-|-|1|cl_mouseenable 0; _y_spt_afterframes_await_load;
+
+s00-------|------|-d----|-|-|66|_y_spt_setangles 89 -90;
+----------|------|---1--|-|-|1|_y_spt_setangles 89 -90;
+// seam
+----------|------|------|-|-|33|_y_spt_setangles -7.953255 36.714287 
+
+----------|------|---1--|-|-|1|
+----------|------|------|-|-|5|_y_spt_setangles 0 90;
+----------|-l----|------|-|-|10|
+----------|------|------|-|-|8|
+----------|------|------|-|-|10|_y_spt_setangles -5 -169.5;
+----------|------|---1--|-|-|1|
+----------|---b--|------|-|-|5|
+----------|------|------|-|-|10|_y_spt_setangles 0 -140; _y_spt_anglesetspeed 10;
+----------|f-----|------|-|-|10|
+----------|------|------|-|-|8|_y_spt_setangles -17.7 91.5;
+----------|------|---1--|-|-|1|
+----------|---b--|------|-|-|5|
+----------|------|------|-|-|20|_y_spt_setangles 0 0;
+----------|---b--|------|-|-|8|
+----------|---b--|---1--|-|-|1|
+----------|---b--|--u---|-|-|1|_y_spt_setangles 40 -9; _y_spt_anglesetspeed 360;
+----------|---b--|------|-|-|4|
+----------|---b--|--u---|-|-|1|
+s00-------|------|------|0|-|10|_y_spt_anglesetspeed 8;
+----------|------|------|-|-|13|_y_spt_setangles -65 -45;
+----------|------|-d----|-|-|10|
+----------|------|-d-1--|-|-|1|
+----------|------|-d----|-|-|1|_y_spt_setangles -6 -24; _y_spt_anglesetspeed 360;
+----------|------|-du---|-|-|1|
+s00-------|------|-d----|130|-|15|_y_spt_setangles -75 -130; _y_spt_anglesetspeed 8.5;
+sl;
+s00-------|------|-d----|20|-|1|
+s00-------|------|-d-1--|-|-|1|
+s00-------|------|-d----|-|-|33|_y_spt_setangles -55 -70;
+s00-------|------|-d-1--|180|-|1|
+s00-------|------|-d----|-|-|30|_y_spt_setangles 71.5 -110.6;
+s00-------|------|------|-|-|30|_y_spt_setangles 71.5 -110.6;
+----------|------|------|-|-|1|cl_mouseenable 1; y_spt_cvar fps_max 66.6667; tas_pause 1; stop; save oob-09_2;

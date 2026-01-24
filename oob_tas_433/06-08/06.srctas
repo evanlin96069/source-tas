@@ -1,0 +1,65 @@
+save oob-06
+demo 06
+playspeed 1
+settings tas_strafe_vectorial 1; tas_strafe_dir 3; speedrun_stop; tas_strafe_afh 1; tas_strafe_scale 1.0; tas_strafe_version 9;
+// settings developer 1; ent_bbox player; ent_bbox prop_physics; ent_bbox prop_portal;
+
+// This script desync quite a bit...
+
+settings spt_set_ivp_seed_on_load 1;
+settings spt_set_all_sounds_available_after_load 1;
+settings spt_set_physics_hook_offset_on_load 0.015;
+
+vars
+var start cl_mouseenable 0; spt_afterframes_await_load; sensitivity 1.44; spt_set_isg 1; spt_trace_start;
+var end cl_mouseenable 1; fps_max 66.6667; tas_aim_reset;
+
+frames
+
+//sXXljdbcgu|flrbud|jdu12r|yaw|pitch|ticks|
+
+----------|------|------|-|-|1|[start];
+----------|------|------|-|-|40|
+----------|------|------|-|-|0|tas_aim 30 -19.5 5;
+----------|------|------|-|-|5|
+----------|------|---1--|-|-|1|
+
+----------|------|------|-|-|0|spt_afterframes_await_load;
+----------|------|------|-|-|2|
+----------|------|------|-|-|0|host_framerate 0.1;
+sl;
+----------|------|------|-|-|0|host_framerate 0.015;
+
+----------|------|------|-|-|0|tas_aim -89 90 15;
+s30--d----|------|------|171|-|10|
+----------|------|------|-|-|0|tas_strafe_scale 0.8
+s00--d----|------|------|140|-|8|
+----------|------|------|-|-|0|tas_strafe_scale 1.0;
+
+----------|------|------|-|-|0|host_framerate 0.02;
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|------|-|-|0|host_framerate 0.015;
+
+// trigger elevator
+----------|------|-d----|-|-|5|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+sl;
+----------|------|-d----|-|-|1|
+----------|------|------|-|-|1|[end]; tas_pause 1; spt_trace_set_tick -1; stop; save oob-06_1;
